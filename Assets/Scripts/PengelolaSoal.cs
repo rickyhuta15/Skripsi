@@ -11,14 +11,17 @@ public class PengelolaSoal : MonoBehaviour
 
     private string [,] soalBag;
 
+    
     int indexSoal;
     int maxSoal;
     bool ambilSoal;
     char kunciJ;
 
+
     // Komponent UI
     public Text txtSoal, txtOpsiA,txtOpsiB,txtOpsiC,txtOpsiD;
 
+  
     bool isHasil;
     private float durasi;
     public float durasiPenilaian;
@@ -71,20 +74,10 @@ public class PengelolaSoal : MonoBehaviour
     }
 
     public GameObject panel;
-    int counter;
-    public void hidepanel()
-    {
-        counter++;
-        if(counter % 2 == 1)
-        {
-            panel.gameObject.SetActive(false);
-        }
-        else
-        {
-            panel.gameObject.SetActive(true);
-        }
-    }
-    
+   
+
+ 
+   
     
     public void Opsi(string opsiHuruf)
     {
@@ -117,10 +110,12 @@ public class PengelolaSoal : MonoBehaviour
         if(huruf.Equals(kunciJ))
         {
             penilaian = "Benar!";
+           
         }
         else
         {
             penilaian = "Salah!";
+            
         }
         txtPenilaian.text = penilaian;
     }
@@ -136,11 +131,14 @@ public class PengelolaSoal : MonoBehaviour
             if (durasiPenilaian <= 0)
             {
                 panel.SetActive(false);
+                
                 durasiPenilaian = durasi;
 
                 TampilkanSoal();
             }
         }
+
+        
         
     }
 

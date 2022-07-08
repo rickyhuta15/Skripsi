@@ -11,13 +11,20 @@ ScriptsOnlyBuild:
     - UIManager
     - UIVirtualButton
     - UIVirtualJoystick
+    - buttonAction
+    - makeitbutton
     Cinemachine.dll:
     - Cinemachine.Cinemachine3rdPersonFollow
     - Cinemachine.CinemachineBasicMultiChannelPerlin
     - Cinemachine.CinemachineBrain
     - Cinemachine.CinemachinePipeline
+    - Cinemachine.CinemachineSameAsFollowTarget
     - Cinemachine.CinemachineVirtualCamera
     - Cinemachine.NoiseSettings
+    InkEditor.dll:
+    - Ink.UnityIntegration.InkCompiler
+    - Ink.UnityIntegration.InkLibrary
+    - Ink.UnityIntegration.InkSettings
     Unity.InputSystem.dll:
     - UnityEngine.InputSystem.InputActionAsset
     - UnityEngine.InputSystem.InputActionReference
@@ -104,43 +111,49 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1634}
     - Class: 114
-      Script: {instanceID: 1694}
+      Script: {instanceID: 1696}
     - Class: 114
-      Script: {instanceID: 2132}
+      Script: {instanceID: 2166}
     - Class: 114
-      Script: {instanceID: 2290}
+      Script: {instanceID: 2330}
     - Class: 114
-      Script: {instanceID: 2314}
+      Script: {instanceID: 2354}
     - Class: 114
-      Script: {instanceID: 2778}
+      Script: {instanceID: 2846}
     - Class: 114
-      Script: {instanceID: 2820}
+      Script: {instanceID: 2890}
     - Class: 114
-      Script: {instanceID: 2916}
+      Script: {instanceID: 2906}
     - Class: 114
-      Script: {instanceID: 3000}
+      Script: {instanceID: 2992}
     - Class: 114
-      Script: {instanceID: 3072}
+      Script: {instanceID: 3078}
     - Class: 114
-      Script: {instanceID: 3184}
+      Script: {instanceID: 3152}
     - Class: 114
-      Script: {instanceID: 3372}
+      Script: {instanceID: 3270}
     - Class: 114
-      Script: {instanceID: 3786}
+      Script: {instanceID: 3472}
     - Class: 114
-      Script: {instanceID: 3912}
+      Script: {instanceID: 3908}
     - Class: 114
-      Script: {instanceID: 4118}
+      Script: {instanceID: 4040}
     - Class: 114
-      Script: {instanceID: 4356}
+      Script: {instanceID: 4262}
     - Class: 114
-      Script: {instanceID: 4380}
+      Script: {instanceID: 4512}
     - Class: 114
-      Script: {instanceID: 4386}
+      Script: {instanceID: 4538}
     - Class: 114
-      Script: {instanceID: 4766}
+      Script: {instanceID: 4544}
     - Class: 114
-      Script: {instanceID: 5546}
+      Script: {instanceID: 4944}
+    - Class: 114
+      Script: {instanceID: 5758}
+    - Class: 114
+      Script: {instanceID: 35368}
+    - Class: 114
+      Script: {instanceID: 35382}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -201,39 +214,39 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1632}
     - Class: 114
-      Script: {instanceID: 1730}
+      Script: {instanceID: 1734}
     - Class: 114
-      Script: {instanceID: 1844}
+      Script: {instanceID: 1856}
     - Class: 114
-      Script: {instanceID: 1928}
+      Script: {instanceID: 1950}
     - Class: 114
-      Script: {instanceID: 2030}
+      Script: {instanceID: 2064}
     - Class: 114
-      Script: {instanceID: 2078}
+      Script: {instanceID: 2112}
     - Class: 114
-      Script: {instanceID: 2418}
+      Script: {instanceID: 2468}
     - Class: 114
-      Script: {instanceID: 2820}
+      Script: {instanceID: 2890}
     - Class: 114
-      Script: {instanceID: 3046}
+      Script: {instanceID: 3124}
     - Class: 114
-      Script: {instanceID: 3912}
+      Script: {instanceID: 4040}
     - Class: 114
-      Script: {instanceID: 3958}
+      Script: {instanceID: 4090}
     - Class: 114
-      Script: {instanceID: 4386}
+      Script: {instanceID: 4544}
     - Class: 114
-      Script: {instanceID: 4766}
+      Script: {instanceID: 4944}
     - Class: 114
-      Script: {instanceID: 4786}
+      Script: {instanceID: 4964}
     - Class: 114
-      Script: {instanceID: 4914}
+      Script: {instanceID: 5096}
     - Class: 114
-      Script: {instanceID: 4938}
+      Script: {instanceID: 5120}
     - Class: 114
-      Script: {instanceID: 5298}
+      Script: {instanceID: 5504}
     - Class: 114
-      Script: {instanceID: 5456}
+      Script: {instanceID: 5668}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -959,6 +972,12 @@ ScriptsOnlyBuild:
     className: PositionAsUV1
   - hash:
       serializedVersion: 2
+      Hash: bcb3cc685fdd3a8b294e500b0ddbb39f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BasicInkExample
+  - hash:
+      serializedVersion: 2
       Hash: 87ff43d2baf3385cba327d8f803a4ebb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -1083,6 +1102,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Mask
+  - hash:
+      serializedVersion: 2
+      Hash: 745fafd626ee48fff45c3e26daf68c04
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: QuitGameOnKeypress
   - hash:
       serializedVersion: 2
       Hash: bfeb96683d3796cadaab890bfdfe92be
@@ -1413,8 +1438,20 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
     className: TMP_TextEventCheck
+  - hash:
+      serializedVersion: 2
+      Hash: c0997c6fadc72a45cc56d7e14ff403e0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: makeitbutton
+  - hash:
+      serializedVersion: 2
+      Hash: 235a1e8275c5d1ab2a1c0f017d90e1b5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: buttonAction
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
   - Assets/Scenes/Playground.unity
-  playerPath: C:/Users/ASUS/Downloads/GAmifikasi/build apktes/tes3.apk
+  playerPath: C:/Users/ASUS/Downloads/GAmifikasi/build apktes/tes5.apk
